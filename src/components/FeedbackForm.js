@@ -60,7 +60,7 @@ const FeedbackForm = () => {
       >
         <img width={"100%"} src={top} alt="top-image" />
         <TextField
-          name="name"
+          name="Name"
           label="Name"
           value={formData.Name}
           onChange={handleChange}
@@ -70,7 +70,7 @@ const FeedbackForm = () => {
         <br />
         <br />
         <TextField
-          name="registeredNumber"
+          name="RegisteredNumber"
           label="Registered Number"
           value={formData.RegisteredNumber}
           onChange={handleChange}
