@@ -6,7 +6,7 @@ const Data = () => {
   const [data, setData] = useState([]);
 
   const fetchPost = async () => {
-    await getDocs(collection(db, "feedback-form-data")).then(
+    await getDocs(collection(db, "feedbackdata")).then(
       (querySnapshot) => {
         const newData = querySnapshot.docs.map((doc) => ({
           ...doc.data(),
@@ -37,8 +37,8 @@ const Data = () => {
         </tr>
         {data.map((item) => (
           <tr>
-            <td>{item.name}</td>
-            <td>{item.registeredNumber}</td>
+            <td>{item.Name}</td>
+            <td>{item.RegisteredNumber}</td>
             <td>{item.dob}</td>
             <td>{item.fatherName}</td>
             <td>{item.fatherProfession}</td>

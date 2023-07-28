@@ -10,8 +10,8 @@ import { Link } from "react-router-dom";
 
 const FeedbackForm = () => {
   const [formData, setFormData] = useState({
-    name: "",
-    registeredNumber: "",
+    Name: "",
+    RegisteredNumber: "",
     dob: "",
     fatherName: "",
     fatherProfession: "",
@@ -30,7 +30,7 @@ const FeedbackForm = () => {
     try {
       console.log(formData);
       const docRef = await addDoc(
-        collection(db, "feedback-form-data"),
+        collection(db, "feedbackdata"),
         formData
       );
       console.log("Document written with ID: ", docRef.id);
@@ -62,7 +62,7 @@ const FeedbackForm = () => {
         <TextField
           name="name"
           label="Name"
-          value={formData.name}
+          value={formData.Name}
           onChange={handleChange}
           required
           fullWidth
@@ -72,7 +72,7 @@ const FeedbackForm = () => {
         <TextField
           name="registeredNumber"
           label="Registered Number"
-          value={formData.registeredNumber}
+          value={formData.RegisteredNumber}
           onChange={handleChange}
           required
           fullWidth
